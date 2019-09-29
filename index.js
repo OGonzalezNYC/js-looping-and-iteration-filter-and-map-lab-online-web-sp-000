@@ -14,5 +14,5 @@ function exactMatch(arrayOfDriverObjects, attributeValueObject) {
 
 
 function exactMatchToList(arrayOfDriverObjects, attributeValueObject) {
-  
+  return 
 }
