@@ -1,32 +1,18 @@
-// Code your solution here:
-
 function driversWithRevenueOver(arrayOfDriverObjects, number) {
-  return arrayOfDriverObjects.filter(driverObject => driverObject.revenue > number);
+  return arrayOfDriverObjects.filter(driver => driver.revenue > number);
 }
 
 
-function driverNamesWithRevenueOver(array, number) {
-  return driversWithRevenueOver(array, number).map(driverObject => driverObject.name);
+function driverNamesWithRevenueOver(arrayOfDriverObjects, number) {
+  return driversWithRevenueOver(arrayOfDriverObjects, number).map(driver => driver.name);
 }
 
 
-// function exactMatch(arrayOfDriverObjects, unknownObject) {
-//   return arrayOfDriverObjects.filter(driverObject => Object.keys(driverObject).includes(Object.keys(unknownObject)[0]) && 
-//   driverObject[Object.keys(unknownObject)[0]] === unknownObject[Object.keys(unknownObject)[0]]
-//   );
-// }
-
-function exactMatch (arrayOfDriverObjects, unknownObject) {
-  return arrayOfDriverObjects.filter(function(driverObject) {
-    let matches
-    for (const key in unknownObject) {
-      matches = driverObject[key] === unknownObject[key]
-    }
-    return matches
-  })
-}
+function exactMatch(arrayOfDriverObjects, attributeValueObject) {
+  return arrayOfDriverObjects.filter(driver => Object.values(driver).includes(Object.values(attributeValueObject)[0]) && driver[attributeValueObject[0]] === attributeValueObject[attributeValueObject[0]]
+)}
 
 
-function exactMatchToList(arrayOfDriverObjects, object) {
-  return exactMatch(arrayOfDriverObjects, object).map(driverObject => driverObject.name);
+function exactMatchToList() {
+  
 }
