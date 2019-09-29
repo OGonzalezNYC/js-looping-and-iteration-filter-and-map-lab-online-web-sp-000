@@ -14,5 +14,5 @@ function exactMatch(arrayOfDriverObjects, attributeValueObject) {
 
 
 function exactMatchToList(arrayOfDriverObjects, attributeValueObject) {
-  return exactMatch(arrayOfDriverObjects, attributeValueObject)
+  return exactMatch(arrayOfDriverObjects, attributeValueObject).map(driver => driver.name);
 }
